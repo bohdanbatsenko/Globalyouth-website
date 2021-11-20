@@ -1,0 +1,210 @@
+.homepage-banners
+	width: 100%
+	height: 100%
+	padding: 0
+	margin: 0
+	//height: auto
+	//min-height: 600px
+	display: flex
+	justify-content: center
+	align-items: center
+	@media only screen and (max-width: 768px)
+		flex-direction: column
+	@media only screen and (min-width: 768px)	
+		flex-direction: row
+	.banner-leaders
+		flex-basis: 50%
+		width: 100%
+		height: 100%
+		margin: 0
+		position: relative
+		background: url(../img/leaders/homepage-banner/leaders_banner2.jpg) no-repeat
+		background-position: center center
+		background-size: cover
+		//min-height: 600px
+		padding: 40px 30px
+		overflow: hidden
+		@media only screen and (min-width: 768px)
+			min-height: 600px
+		&:hover
+			&:before
+				opacity: 1
+				
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 150%
+			height: 150%
+			line-height: 0
+			background: rgba(0,0,0,.5)
+			box-shadow: inset 0 20px 90px 190px  rgba(0,0,0,0.2)
+			border-radius: 50%
+			opacity: 0
+			transition: all .25s ease-in-out
+			z-index: 0
+		.leaders-hero-wrap
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: left
+			z-index: 2
+			.leaders-top-title
+				display: block
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					//background: #000
+					background: url(../img/leaders/homepage-banner/homepage_leaders_logo.png) no-repeat 
+					background-size: cover
+					background-position: center center
+					display: block
+					width: 100px
+					height: 100px
+					top: 20px
+					right: 30px
+					z-index: 10
+					@media only screen and (max-width: 1190px)
+						right: 0
+						top: -40px
+			img
+				flex: 1
+				display: block
+				width: 100%
+				max-width: 400px
+				z-index: 2
+			a
+				margin: 35px 10px 5px 10px
+				display: inline-block
+				max-width: 200px
+				text-align: center
+				padding: 10px
+
+	.banner-gyf
+		flex-basis: 50%
+		width: 100%
+		height: 100%
+		position: relative
+		background: #11b009 url(../img/gyf/homepage-banner/homepage_nastia_bg_trsp.png) no-repeat
+		background-position: bottom right
+		background-size: 60%
+		//min-height: 600px
+		padding: 40px 25px
+		position: relative
+		overflow: hidden
+		&:hover
+			&:before
+				opacity: 1
+				
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 150%
+			height: 150%
+			line-height: 0
+			background: rgba(0,0,0,.5)
+			box-shadow: inset 0 20px 90px 190px  rgba(0,0,0,0.2)
+			border-radius: 50%
+			opacity: 0
+			transition: all .25s ease-in-out		
+		@media only screen and (min-width: 768px)
+			min-height: 600px		
+		.tab_item_left
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding: 1.5rem 1rem
+			height: 100%
+			@media only screen and (max-width: 600px)
+				text-align: center				
+			@media only screen and (min-width: 600px)
+				align-items: left
+				text-align: left
+			.back2Ukraine
+				display: inline-block
+				font-size: 30px
+				color: yellow
+				transition-delay: .2s
+				animation: tab-animation .25s
+				transition: all .25s ease
+				position: relative
+				@media only screen and (max-width: 600px)
+					margin: 0 auto
+					text-align: center								
+			.title-ua
+				color: yellow
+				margin: 0
+				padding: 0
+				font-size: 30px
+				line-height: 1.2
+				font-family: $default-font-bold
+				text-transform: uppercase
+				animation: tab-animation .45s
+				transition: all .25s ease
+				position: relative	
+			p
+				margin-top: 20px
+				color: #fff
+				line-height: 1.2
+			.logo-wrap
+				@media only screen and (max-width: 768px)
+					margin-top: 40px
+				@media only screen and (min-width: 992px)
+					margin-top: 40%
+				img
+					display: inline-block
+					width: 120px
+					margin: 2% 15px 10px 0
+		.tab_item_right
+			align-items: center
+			.img-wrap
+				position: relative
+				img
+					max-width: 300px
+					animation: tab-animation-img 1s
+					transition: all .3s ease
+					position: relative
+					@media only screen and (min-width: 992px)
+						position: absolute
+						transform: translate(-10%, 80%)
+						width: 250px
+	.button-homepage
+		position: absolute
+		border-radius: 0
+		right: 0
+		bottom: 4px
+		padding: 10px 20px
+		text-align: center
+		i
+			display: inline-block
+			margin-right: -5px
+		.fa
+			font-size: 28px
+@keyframes tab-animation
+	0%
+		left: 100px
+	100%
+		left: 0
+@keyframes tab-item-animation
+	0%
+		opacity: 0
+		//left: 200px
+	100%
+		opacity: 1
+		//left: 0
+			
+@keyframes tab-animation-img
+	0%
+		transform: scale(.7)
+	100%
+		transform: scale(1)	
+

@@ -1,0 +1,343 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "header"
+@import "buttons"
+//@import "homepage-banners2020"
+//@import "homepage-sponsors2020"
+//@import "slider-index"
+//@import "slider-home2020"
+@import "massmedia"
+@import "contacts"
+@import "gyf"
+@import "history"
+@import "leaders"
+@import "japday"
+@import "koreancamp"
+@import "koreanday"
+@import "koreanlanguage"
+@import "news"
+@import "partners"
+@import "reviews"
+//@import "rio"
+@import "team"
+@import "vision"
+@import "wcdf"
+@import "wcexh"
+
+
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+.text-left
+	text-align: left	
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.grid
+	display: grid
+.hidden
+	display: none
+// .avoid-clicks
+// 	pointer-events: inherit
+
+.donate-wrap
+	position: fixed
+	top: 250px
+	right: 0
+	z-index: 99
+	opacity: 0
+	text-align: center
+	transition: all .5s ease-in-out
+	&:hover
+		img.donate_heart
+			width: 55px
+			margin-bottom: 15px
+		img.donate_title
+			width: 40px
+			opacity: 0
+	img.donate_heart
+		display: inline-block
+		width: 45px
+		margin: 0
+		padding: 0
+		transition: all .5s ease-in-out
+	img.donate_title
+		display: inline-block
+		width: 60px
+		margin: 0
+		padding: 0
+		transition: all .5s ease-in-out
+.fix-donate
+	right: 20px
+	transition: all 1s ease-in-out
+	opacity: 1
+	//z-index: 99
+.donate_content_box
+	position: relative
+	background-color: #fff
+	max-width: 780px
+	padding: 20px
+	margin: auto
+	text-align: center
+	.mfp-close
+		position: absolute
+		top: 0
+		right: 0
+	img
+		display: inline-block
+		width: 80px
+		float: left
+		margin-right: 30px
+	p
+		font-family: $default-font-regular
+		color: #666
+		text-align: left
+		font-size: 17px
+		&:last-child
+			text-align: center
+			font-size: 21px
+
+
+h1, h2, h3, h4, h5, h6
+	font-family: $titles-font-regular
+	font-size: em(43)
+	line-height: 1.4
+h2
+	font-size: em(34px)
+h3,h4
+	font-family: $titles-font-regular
+	text-transform: uppercase
+	font-size: em(17px)
+h4
+	font-size: em(15px)
+h5
+	font-size: em(14px)
+.hidden
+	display: none
+
+.s-wide
+	padding: 40px 0
+	h2
+		text-align: center
+		margin-top: 0
+		line-height: em(19px)
+.s-gray
+	background-color: lighten(lightgray,5%)
+.s-dark
+	background-color: lighten($main-color, 5%)
+	color: #fff
+.s-pink
+	background-color: lighten(pink, 8%)
+.s-violate
+	background-color: lighten($main-color, 15%)
+.s-yellow
+	background-color: lighten($yellow-color, 25%)
+
+.s-contacts
+	h2
+		font-family: $titles-font-light
+	h4
+		color: $accent
+		font-size: em(24px)
+	p
+		font-size: em(22px)
+
+
+
+
+
+
+
+
+// footer
+.main_footer
+	background-color: lighten($brand-kor-purple, 10%)
+	padding: 50px 0
+	color: #fff
+	font-size: 14px
+	.logo-footer
+		opacity: .3
+		width: 140px
+		img
+			margin-top: 0
+			max-width: 100%
+			width: 60px
+	.certificate-wrap
+		display: flex
+		padding: 5% 0
+		align-items: center
+		justify-content: center
+		.button-purple
+			display: inline-block
+			border: none
+			background-color: darken($brand-kor-purple, 10%)
+			color: #fff
+			font-size: em(12px)
+			letter-spacing: 1px
+			text-transform: uppercase
+			text-decoration: none
+			padding: 12px 18px
+			border-radius: 3px
+			box-shadow: 0 4px 0 darken($brand-kor-purple, 15%)
+			transition: all .15s ease
+			text-align: center
+			&:hover, &:focus
+				color: #fff
+				text-decoration: none
+			&:hover
+				background-color: $brand-kor-purple
+			&:active
+				background-color: darken($brand-kor-purple, 25%)
+			i
+				font-size: em(4px)
+				vertical-align: bottom
+
+	.footer-about
+		opacity: .4
+		font-size: em(13px)
+		margin-top: 15px
+	.top-panel-box
+		h4
+			font-family: $titles-font-light
+			font-size: em(16px)
+			letter-spacing: 1px
+			margin-top: 0
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				height: 1px
+				width: 100%
+				background-color: #fff
+				left: 0
+				bottom: -9px
+				opacity: .4
+		ul,li
+			padding: 0
+			margin: 0
+			list-style-type: none
+			li
+				display: inline-block
+				max-width: 100%
+				opacity: .35
+				font-size: em(15px)
+				position: relative
+				margin-bottom: 10px
+				transition: all .5s ease
+				&:only-child
+					max-width: 100%
+				&:hover
+					opacity: 1
+				.fa
+					font-size: em(18px)
+					position: absolute
+					top: 3px
+					left: -20px
+		ul.footer-menu
+			li
+				display: block
+				max-width: 100%
+				color: #fff
+				a
+					display: block
+					list-style-type: none
+					text-decoration: underline
+					color: #fff
+					&:hover
+						text-decoration: none
+				.fa
+					transition: all .5s ease
+	.top-phone
+		text-align: right
+		font-size: em(20px)
+		font-family: $titles-font-light, sans-serif
+		@media only screen and (max-width : 992px)
+			text-align: left
+		span
+			font-size: em(13px)
+			opacity: .6
+	.top-email
+		font-size: em(14px)
+		span
+			font-size: em(13px)
+			opacity: .6
+.social-footer
+	margin-top: 0
+	.soc
+		ul,li
+			margin: 0
+			padding: 0
+			list-style-type: none
+		li
+			display: inline-block
+			margin: 3px
+			a
+				color: #ababab
+				font-size: 17px
+				display: block
+				background-color: rgba(#fff,.2)
+				height: 38px
+				width: 38px
+				text-align: center
+				margin-top: 2px
+				line-height: 38px
+				border-radius: 10em 
+				margin-bottom: 0
+				transition: color .5s, background-color .5s ease
+				&:hover
+					color: rgba(#fff,.8)
+
+
+
+.top
+	//display: none
+	position: fixed
+	bottom: 20px
+	right: -100px
+	background-color: #e0e0e0
+	z-index: 12
+	border-radius: 10em
+	color: #666
+	font-size: 26px
+	width: 50px
+	height: 50px
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: .5
+	i
+		line-height: 0
+	&:hover
+		color: #fff
+		background-color: $accent
+		opacity: 1
+	&.active
+		right: 20px
+.top.active
+	right: 20px
+
+.disable-scroll
+	position: relative
+	overflow: hidden
+	height: 100vh
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+
+
+
+@import "media" // Always at the end

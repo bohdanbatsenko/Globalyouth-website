@@ -1,0 +1,452 @@
+@import "vars.sass"
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url(../img/preloader.gif)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+html
+	overflow-y: hidden
+	scroll-behavior: smooth!important
+html, body
+	width: 100%
+	height: 100%
+a
+	color: $main-color
+
+	
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font-regular
+	overflow-x: hidden
+	opacity: 1
+	//overflow: hidden
+	scroll-behavior: smooth
+	&.ishome
+		position: relative
+		overflow-y: auto
+		.site-header
+			border-bottom: none
+			//height: 100vh
+			@media screen and (max-width: 990px)
+				height: 100%
+			.header-wrap
+				position: relative
+				.top-mnu
+					ul.sf-menu
+						>	li
+							background: none
+							border-right: none
+							border-left: none						
+							> a
+								display: inline-block
+								color: #fff
+								background: none
+								border-right: none
+								border-left: none
+						ul.mega-sub
+							> li
+									display: inline-block
+			.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+				background-color: #fff
+  
+
+
+body.ishome.bg-video
+	.showcase
+		position: relative
+		width: 100%
+		min-height: 100vh
+		z-index: 2
+		padding: 0 5rem 5rem
+		@media screen and (max-width: 990px)
+			padding: 0 5rem 2rem 1rem
+		#my-header
+			.site-header
+				.header-wrap
+		video
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			opacity: 1
+			z-index: -1
+		.text-wrap
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+			min-height: 660px
+			padding: 100px
+			@media screen and (max-width: 990px)
+				margin-left: 20px
+				padding-left: 20px
+			.spacer-fx
+				@media screen and (max-width: 990px)
+					display: none
+			.text
+				position: relative
+				z-index: 10
+				align-self: start
+				h2
+					font-size: 4rem
+					font-weight: 800
+					color: white
+					line-height: 1em
+					text-transform: uppercase
+					margin-bottom: 2rem
+					@media screen and (max-width: 990px)
+						font-size: 2.5rem
+				h3
+					font-size: 2em
+					font-weight: 400
+					color: #fff
+					line-height: 1em
+					margin-bottom: 2rem
+					@media screen and (max-width: 990px)
+						font-size: 1.5rem
+				p
+					font-size: 1.1em
+					color: #fff
+					margin: 20px 0
+
+					max-width: 400px
+			.social-wrap
+				bottom: 20px
+				align-self: start
+				position: absolute
+				ul.social
+					margin-left: 0
+					padding-left: 0
+					display: flex
+					justify-content: center
+					align-items: center
+					li
+						list-style-type: none
+						a
+							display: inline-block
+							margin-right: 20px
+							//filter: invert(1)
+							transform: scale(.5)
+							transition: .5s
+							color: white
+							i
+								font-size: 3rem
+					&:hover
+						a
+							transform: scale(.5) translateY(-15px)
+							color: lighten($main-color,50%)
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: #000
+			//mix-blend-mode: screen
+			opacity: .5
+			z-index: -1
+
+
+
+
+
+// Styles for global site
+.site-header
+	border-bottom: 2px $main-color solid
+	.header-wrap
+		position: relative
+		&:after
+			clear: both
+			content: ''
+			display: table
+.logo
+	float: left
+	img
+		width: 120px
+		height: auto
+		margin-top: 20px
+
+.top-mnu
+	float: right
+.mega-sub
+	text-align: center
+	li
+		display: inline-block
+		line-height: 1.2
+		text-align: left
+		list-style-type: none
+		vertical-align: top
+		a
+			font-family: $titles-font-regular
+			color: #000
+			i
+				margin-right: 5px
+			&:hover
+			//color: $accent
+
+// sf-base start
+.sf-menu
+	position: static
+	float: none
+	.sf-mega
+		background-color: #fff
+		padding-top: 22px
+		padding-bottom: 22px
+		ul
+			display: block
+			float: none
+			position: relative
+			box-shadow: none
+	li
+		white-space: normal
+		position: static
+	> li
+		> ul
+			width: 220px
+			left: auto
+			li
+				.sf-with-ul:after
+					font-family: "FontAwesome"
+					content: '\f105'
+					right: 1em
+					position: absolute
+// sf-base end
+
+.hamburger
+	top: 12px
+	right: 0
+	position: absolute
+	z-index: 2
+	.hamburger-box
+		width: 34px
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	border-radius: 0
+	width: 34px
+	height: 2px
+	background-color: #666
+
+.mm-navbar
+	height: 100px
+	position: relative
+	.mm-title 
+		padding: 0
+		img
+			width: 55px
+			height: auto
+			margin: 10px 0 5px
+
+html.mm-opened
+	overflow-y: scroll
+	.mega-sub li
+		display: block
+		margin-bottom: 10px
+		text-transform: uppercase
+		font-size: 14px
+		line-height: 1.2
+		
+			
+		// white-space: nowrap
+		// text-overflow: ellipsis-word
+
+
+.mm-panels > .mm-panel.mm-hasnavbar
+	right: -8px
+.mm-menu .mm-listview>li a:not(.mm-next)
+	background-color: transparent
+.mm-panels>.mm-panel:after, .mm-panels>.mm-panel:before
+	height: 0
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview
+	margin-top: 0
+
+
+
+.mm-listview
+	text-align: left
+	> li
+		> a
+			font-family: $titles-font-regular
+			text-transform: uppercase
+			transition: color .25s ease
+			padding:
+				left: 10%
+				right: 8%
+				top: 8px
+			&:hover
+				color: $accent
+				&::before
+					color: $accent
+			&::before
+				content: '\f0da'
+				font-family: "FontAwesome"
+				margin-right: 9px
+				text-decoration: none
+				font-size: 12px
+				color: #1f1f1f
+				transition: color .25s ease
+		&.active
+			& > a
+				color: $accent
+ul.mega-sub li a::before
+	@media screen and (max-width: 600px)
+		content: '\f0da'
+		font-family: "FontAwesome"
+		margin-right: 9px
+		text-decoration: none
+		font-size: 12px
+		color: #1f1f1f
+		transition: color .25s ease
+
+
+
+//custom styles
+.sf-menu
+	li
+	//	&:hover
+	//		a
+	//			color: $accent
+	//	&.active
+	//		a
+	//			color: $accent
+	a
+		font-family: $titles-font-regular
+		text-transform: uppercase
+		color: #333
+		background: #fff
+	> li
+		background-color: #fff
+		border-left: #ddd 1px solid
+		&:last-child
+			border-right: #ddd 1px solid
+		> a
+				padding: 20px 20px
+				border-bottom: 5px solid transparent
+				transition: all .25s ease
+				color: #333
+				+ *
+					//border-top: $main-color solid 5px
+					a
+						transition: all .5s ease
+						//border-bottom: #ddd 1px solid
+						&:hover
+							color: $main-color
+							
+		&:hover
+			background-color: #fff
+			>	a
+				color: $main-color
+		&.active
+			>	a
+				color: $main-color
+
+.sf-menu
+	.container-fluid
+		padding-right: 15px!important
+		padding-left: 15px!important
+		margin-right: auto!important
+		margin-left: auto!important
+		.row
+			margin-right: -15px!important
+			margin-left: -15px!important
+		.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+			padding-right: 15px!important
+			padding-left: 15px!important
+.menu-new-item
+	margin-bottom: 30px
+	h3
+		margin: 15px 0
+	a
+		padding: 0
+		font-size: 18px
+		border-bottom: none
+		text-decoration: underline
+		color: $main-color
+	p
+		font-size: 14px
+		color: #666
+.sf-menu 
+	> li
+		> a
+			+ *
+				.menu-new-item
+					a
+						border-bottom: none
+						&:hover
+
+
+
+//social btn
+.social-btn-wrap
+	position: absolute
+	width: 100%
+	bottom: 50px
+	.social-btn
+		display: inline-block
+		padding: 5px 8px
+		height: 50px
+		ul
+			margin-left: 0
+			padding: 2px
+			text-align: center
+			li
+				display: inline-block
+				width: 60px
+				height: 60px
+				line-height: 60px
+				text-align: center
+				list-style-type: none
+				background-color: rgba(17,5,77,.8)
+				border-radius: 10em
+				font-size: em(28px)
+				+mt(.5s)
+				&:hover
+					background-color: $accent-color
+					i
+						color: #fff
+				i
+					color: $accent-color
+					+mt(.5s)
+
+
+
+
+
+
+
+.arrow-wrap
+	text-align: center
+	position: relative
+	z-index: 5
+	top: 90px
+.arrow-bottom
+	display: inline-block
+	width: 70px
+	height: 61px
+	cursor: pointer
+	opacity: .7
+	transition: all .25s ease
+	&:hover
+		opacity: 1

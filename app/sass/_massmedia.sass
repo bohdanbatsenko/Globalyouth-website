@@ -1,0 +1,53 @@
+@import "vars.sass"
+
+.s-media-intro
+	height: 200px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	background-image: url(../img/massmedia/media_bg.jpg)
+	background-size: cover
+	background-position: center center
+	width: 100%
+	position: relative
+	.s-media-intro-bg
+		position: absolute
+		display: block
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.5)
+		z-index: 1
+	.s-media-intro-content
+		text-align: center
+		z-index: 2
+		h1
+			margin: 0 auto
+			padding: 10px 20px
+			align-content: center
+			display: inline-block
+			color: #fff
+			text-transform: uppercase
+			text-shadow: 2px 3px 2px #000
+			z-index: 10
+.massmedia
+	.media-title
+		font-family: $default-font-light
+		font-size: 33px
+		text-transform: uppercase
+		margin: 5% 0
+.video-item
+	visibility: inherit!important
+	padding: 10px
+	.youtube
+		.massmedia-img
+			width: 90%
+			height: 160px
+			display: block
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			margin: 0 auto!important		
+	.video-descr
+		margin-top: 15px
+		text-transform: uppercase
+		font-size: 14px

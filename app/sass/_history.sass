@@ -1,0 +1,311 @@
+@import "vars.sass"
+
+.s-history-intro
+	height: 200px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	background-image: url(../img/history/bg-history.jpg)
+	background-size: cover
+	background-position: center center
+	width: 100%
+	.s-history-intro-content
+		text-align: center
+		h1
+			margin: 0 auto
+			padding: 10px 20px
+			align-content: center
+			display: inline-block
+			color: #fff
+			text-transform: uppercase
+			text-shadow: 2px 3px 2px #000
+
+.s-history-text
+	//background-image: url(../img/history/text-bg.jpg)
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat
+	width: 100%
+	position: relative
+	@media only screen and (max-width : 768px)
+		background-position: center center
+	.s-history-text-wrap
+		//margin: 0 50px 120px
+		padding: 35px 0		
+		background-color: rgba(255,255,255,.8)
+		p
+			font-size: 16px
+			text-align: justify
+			//text-indent: 2em
+			&:first-child:first-letter
+				float: left
+				text-indent: 0
+				font-size: 65px
+				line-height: 36px
+				padding-top: 2px
+				padding-right: 5px
+				padding-left: 2px
+		p:not(:first-child)
+			text-indent: 2em
+		.img-left
+			display: inline-block
+			padding: 0 15px 15px 0
+			width: 290px
+			height: 290px
+			border-radius: 10%
+			overflow: hidden
+		.img-right
+			display: inline-block
+			padding: 15px 0 0 15px
+			width: 290px
+			height: 290px
+			border-radius: 45px
+			overflow: hidden		
+		img.img-right
+			float: right
+		img.img-left
+			float: left
+
+.s-timeline
+	position: relative
+	.tl-years-wrap
+		height: 100%
+		max-width: 200px
+		background: lightgrey
+		overflow-x: hidden
+		@media (min-height: 300px)
+			position: sticky
+			top: 0
+		.tl-link
+			//display: block
+
+	.tl-years-content
+		overflow: hidden
+		position: relative
+		.tl-item
+			height: 450px
+			background: grey
+.tl-fixed
+	position: fixed
+
+
+.s-tl-scroll-header
+	img
+		margin: 0 auto
+		margin-bottom: 30px
+		width: 50%
+		max-width: 300px 
+
+.s-tl-scroll
+	max-width: 1170px
+	margin: 0 auto
+	display: grid
+	@media only screen and (min-width: 600px)
+		grid-template-columns: 150px 1fr
+	@media only screen and (max-width: 600px)
+		grid-template-columns: 100px 1fr
+	.tl-nav
+		margin-bottom: 35px
+		ul
+			margin: 0
+			padding: 0
+			//height: 350px
+			max-width: 140px
+			position: sticky
+			top: 20px
+			list-style-type: none
+			li
+				padding: 8px 5px
+				transition: .25s all ease-in-out
+				background-color: lighten($brand-kor-purple, 5%)
+				&.current
+					color: white
+					background-color: lighten($brand-kor-purple, 15%)
+					a
+						color: #fff
+				&:hover
+					background-color: lighten($brand-kor-purple, 10%)
+				a
+					display: block
+					margin-left: 25px
+					text-transform: uppercase
+					color: rgba(#fff,.75)
+					white-space: nowrap
+					transition: .25s all ease-in-out
+					// &.current
+					// 	color: green
+					// 	background: brown
+
+	.tl-content
+		//grid-column: 2/4
+		padding-bottom: 2rem
+		section
+			//margin: 2rem
+			margin: 0 2rem 0.7rem
+			padding: 20px
+			background-color: #f1f1f1
+			transition: background-color .3s ease-in-out
+			@media only screen and (max-width: 600px)
+				margin: 0 0.5rem 0.7rem
+			&:hover
+				outline: 2px solid lighten($brand-kor-purple, 25%)
+				background-color: #fff
+			h1
+				font-family: $default-font-medium
+				color: lighten($brand-kor-purple, 5%)
+
+
+
+
+
+
+
+
+
+// .timeline
+// 	padding: 40px 0
+// 	+media-breakpoint-down(xs)
+// 		padding: $gutter*2 5%
+// 	&-item
+// 		padding: 10px 0
+// 		position: relative
+// 		&::before
+// 			content: '●'
+// 			position: absolute
+// 			width: 1px
+// 			height: 100%
+// 			background-color: lightgrey
+// 			color: $accent
+// 			font-size: 28px
+// 			line-height: 220%
+// 			text-indent: -8px
+
+// 		&:nth-child(odd)
+// 			text-align: right
+// 			padding-right: 90+$gutter
+// 			.timeline-item-img
+// 				right: $gutter
+// 			&::before
+// 				right: 0
+// 			+media-breakpoint-down(xs)
+// 				text-align: left
+// 				padding-left: 90+$gutter
+// 				padding-right: 0
+// 				.timeline-item-img
+// 					left: $gutter
+// 				&::before
+// 					left: -1px
+// 		&:nth-child(even)
+// 			+make-col-offset(6)
+// 			padding-left: 90+$gutter
+// 			.timeline-item-img
+// 				left: $gutter
+// 			&::before
+// 				left: -1px
+// 			+media-breakpoint-down(xs)
+// 				+make-col-offset(0)
+// 		&-img
+// 			width: 74px
+// 			height: 74px
+// 			overflow: hidden
+// 			border-radius: 100%
+// 			border: 5px solid grey
+// 			position: absolute
+// 			background-position: center center
+// 			background-size: cover
+// 			background-repeat: no-repeat
+
+// 		p
+// 			line-height: 1.4
+// 			margin: 4px 0 0 0
+// 			span
+// 				display: block
+// 				font-size: 12px
+// 				color: $accent
+// 				font-weight: bold
+// 				margin-top: 5px
+
+
+.chart 
+  display: grid
+  grid-template-columns: repeat(7, 1fr)
+  grid-template-rows: repeat(100, 1fr)
+  grid-column-gap: 15px
+  grid-row-gap: 3px
+  height: 400px
+  width: 100%
+  background: #fff
+  padding: 45px 10px 0px 10px
+
+ 
+[class*="bar"] 
+  border-radius: 0
+  transition: all .6s ease
+  background-color: #EAF6FD
+  border-top: 1px solid #3DA5EC
+  border-right: 1px solid #3DA5EC
+  border-left: 1px solid #3DA5EC
+  grid-row-start: 1
+  box-sizing: border-box
+  grid-row-end: 101
+  text-align: center
+  margin-top: auto
+
+[class*="bar"] span
+  position: relative
+  top: -20px
+  color: #3DA5EC
+  font-size: 12px
+  font-weight: bold
+
+[class*="bar"] label
+  position: absolute
+  width: auto
+  bottom: -23px
+  color: #3DA5EC
+  font-size: 12px
+  font-weight: bold
+  margin: auto
+  left: 0
+  right: 0
+
+ 
+.lable
+  background-color: #fff
+  text-align: center
+
+.lable span
+  background-color: #EAF6FD
+  border: 1px solid #3DA5EC
+  padding: 0px 20px
+  margin-right: 10px
+
+.bar-9
+  position: relative
+  height: 31.034482758621%
+
+.bar-9
+  position: relative
+  height: 31.034482758621%
+
+.bar-5
+  position: relative
+  height: 17.241379310345%
+
+.bar-19
+  position: relative
+  height: 65.51724137931%
+
+.bar-29
+  position: relative
+  height: 100%
+
+.bar-2
+  position: relative
+  height: 6.8965517241379%
+
+.bar-3
+  position: relative
+  height: 10.344827586207%
+
+

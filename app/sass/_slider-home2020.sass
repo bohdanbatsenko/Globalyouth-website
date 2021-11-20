@@ -1,0 +1,100 @@
+.slider-home
+	position: relative
+	overflow: hidden
+	.owl-item
+		opacity: 0
+		transition: opacity .75s linear
+		&.active
+			opacity: 1
+	.owl-item.active
+		.slide-content .slider-left-content .slide-descr
+			left: 0
+			opacity: 1
+		.slide-content .slider-left-content .gyf-logo-wrap
+			left: 0
+			opacity: 1
+	.slide.gyf
+		background-image: url(../img/slider-index/gyf-bg.png) 
+		width: 100%
+		@media only screen and (max-width: 768px)
+			background: none
+	.slide
+		position: relative
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		min-height: 550px
+		overflow: hidden
+		.slide-content
+			padding-top: 3%
+			.slider-left-content
+				text-align: center
+				.gyf-logo-wrap
+					width: 60%	
+					margin: 0 auto
+					padding: 10px 5px
+					left: 100px
+					opacity: 0
+					transition: all .25s ease
+					transition-delay: .15s	
+					position: relative
+				.slide-descr
+					margin-bottom: 10px
+					transition: all .25s ease
+					left: 100px
+					opacity: 0
+					transition-delay: .15s	
+					position: relative
+					.leaders-title
+						padding-top: 20%
+						text-transform: uppercase
+						font-family: $titles-font-bold
+						font-size: 69px
+						line-height: 69px
+						color: #fff
+						text-shadow: 2px 3px 5px #000
+						@media only screen and (max-width: 768px)
+							padding-top: 15%
+							font-size: 49px
+							line-height: 50px
+						span
+							display: block
+							color: #f6b91b
+						
+					.descr.leaders
+						padding-top: 20px
+						color: #fff
+						font-size: 40px
+						line-height: 45px
+						
+					.button-red
+						background: #ff004c
+						display: inline-block
+						padding: 10px 10px
+						font-size: 16px
+			.slide-img-wrap
+				img
+
+	.owl-nav
+		position: absolute
+		top: 50%
+		width: 100%
+		.owl-prev,
+		.owl-next
+			color: #f6b91b
+			position: absolute
+			text-align: center
+			line-height: 40px
+			font-size: 36px
+			padding: 2px 7px
+			border: solid 5px #f6b91b
+			&.owl-prev
+				left: 10px
+				transition: all .25s ease-in-out
+				&:hover
+					opacity: .5
+			&.owl-next
+				right: 20px
+				transition: all .25s ease-in-out
+				&:hover
+					opacity: .5

@@ -1,0 +1,577 @@
+@import "vars.sass"
+
+.s-dancefestival-hero
+	padding: 25px 25px 30px 25px
+	position: relative
+	width: 100%
+	height: 100%
+	min-height: 550px
+	background-image: url(../img/wcdf/s-hero/s-hero-bg.jpg)
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	.hero-title-wrapper
+		text-align: center
+		//padding: 1em
+		.block-logos
+			padding: 15px 20px
+			display: flex
+			justify-content: center
+			text-align: center
+			img
+				width: 120px
+				display: inline-block
+				max-width: 100%
+				height: auto
+				&:first-child
+					margin-right: 20px
+		h1.recruit
+			font-family: $default-font-bold
+			color: #f44c56
+			padding-bottom: 10px
+		.title-logo
+			min-width: 280px
+			width: 55%
+			margin: 0 auto
+			display: block
+			max-width: 100%
+			height: auto
+			margin-bottom: 30px
+
+%festival-intro
+	margin: 15px
+	padding: 30px 50px
+	background: #fff
+	text-align: justify
+	outline: 3px solid lightyellow
+	outline-offset: -10px
+	transition: all .25s ease
+	&:hover		
+		outline: 13px solid lightyellow
+%worldcamp-blocks
+	display: flex
+	flex-direction: row
+	justify-content: center
+	@media screen and(max-width: 930px)
+		flex-direction: column
+.worldcamp-blocks
+	@extend %worldcamp-blocks
+%world-camp-right
+	display: flex
+	justify-content: center
+	outline: 3px solid lightblue
+	outline-offset: -10px
+	transition: all .25s ease
+	text-align: justify
+	&:hover
+		outline: 13px solid lightblue
+
+%world-camp-left
+	padding: 30px
+	outline: 3px solid lightgreen
+	outline-offset: -10px
+	transition: all .25s ease
+	&:hover		
+		outline: 13px solid lightgreen
+	img
+		float: left
+		margin-right: 20px
+		display: inline-block
+		width: 15%
+		margin-top: 10px
+	h2
+		font-family: $default-font-regular
+		color: $main-color
+
+
+.world-camp
+	position: relative
+	padding: 0
+	margin: 0
+	padding: 30px 15px
+	.world-camp-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-position: center center
+		background-size: cover
+		background-repeat: no-repeat
+		position: absolute
+		z-index: -1
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(#000,.4)
+			//box-shadow: inset 120px 100px 250px rgba(#000,.6), inset -120px -100px 250px rgba(#000,.6)
+	.world-camp-content
+		z-index: 2
+	.festival-intro
+		@extend %festival-intro
+	.worldcamp-blocks
+		@extend .worldcamp-blocks
+		.world-camp-left,
+		.world-camp-right
+			flex: 1 0 0
+			margin: 15px
+			padding: 20px
+			background: #fff
+		.world-camp-left
+			@extend %world-camp-left
+			.wc-desc
+				text-align: justify
+				padding: 25px 30px
+		.world-camp-right
+			@extend %world-camp-right
+			img
+				align-self: center
+				display: inline-block
+				width: 430px
+				max-width: 100%
+				height: auto
+
+	
+	
+	
+.wc-program
+	padding: 30px
+	background-image: url(../img/wcdf/dancefestival_bg.jpg)
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	.section-heading
+		margin: 35px 0 20px
+		h1
+			font-family: $default-font-regular
+			text-transform: uppercase
+			color: #fff
+	img
+		display: inline-block
+		margin: auto
+	.point-right,
+	.point-left
+		background-color: #fff
+		display: flex
+		&:before
+			content: ''
+			position: absolute
+			width: 25px
+			height: 25px
+			background-color: inherit
+			top: -12px
+			left: 50%
+			transform: translateX(-50%) rotate(45deg)
+			z-index: 1
+			@media screen and (min-width: 576px)
+				display: none
+			@media screen and (min-width: 1200px)
+				display: block
+				top: 50%
+				left: initial
+				transform: translate(0, -50%) rotate(45deg)
+				.point-left:before
+					left: -12px
+				.point-right:before
+					right: -12px
+
+
+		.wc-program-descr
+			padding: 50px 20px
+			color: #000
+			margin: auto
+		
+@media screen and (min-width: 1200px)
+	.wc-program .point-left::before
+		left: -12px
+	.wc-program .point-right::before
+		right: -12px
+
+	// 	.point-right,
+	// 	.point-left::before
+	// 		display: none
+		// .wc-program-descr
+		// 	padding: 50px 20px
+
+.intro-text
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 35px	20px
+	.intro-blocks
+		@extend .worldcamp-blocks
+		.intro-block-left,
+		.intro-block-right
+			flex: 1 0 0
+			margin: 15px
+			padding: 30px 35px
+			background: #fff
+		.intro-block-left
+			text-align: justify
+			@extend %world-camp-left
+		.intro-block-right
+			@extend %world-camp-right
+			img.festival-logo
+				display: inline-block
+				float: left
+				margin-right: 20px
+				width: 70px
+				margin-top: 0
+				margin-bottom: auto
+	.festival-intro
+		font-size: 24px
+		@extend %festival-intro
+		outline: 3px solid #fd5555
+		outline-offset: -10px
+		transition: all .25s ease
+		&:hover		
+			outline: 13px solid #fd5555	
+
+	
+.intro-text.requirements
+	h2
+		text-align: center
+		text-transform: uppercase
+.intro-text .intro-blocks .intro-block-left.requirements,
+.intro-text .intro-blocks .intro-block-right.requirements
+	text-align: left
+	//display: block
+	h2
+		font-family: $default-font-regular
+		text-transform: uppercase
+		display: block!important
+		text-align: center
+		margin-bottom: 20px
+.intro-text .intro-blocks .intro-block-right.requirements
+	display: flex
+	align-items: center
+.intro-text.requirements .festival-intro
+	h2
+		font-family: $default-font-regular
+		font-size: 34px
+	table
+		font-family: $default-font-regular
+		font-size: 14px
+		background: white
+		width: 100%
+		border-collapse: collapse
+		text-align: left
+		th 
+			font-weight: bold
+			color: #000
+			background: lighten(#fd5555, 15%)
+			border-bottom: 2px solid #fd5555
+			padding: 10px 8px
+			border-bottom: none
+		td 
+			color: #000
+			border-bottom: 1px solid #fd5555
+			padding: 9px 8px
+			transition: .3s linear
+		tr:hover 
+			td 
+				background: lighten(#fd5555, 15%)
+
+
+
+
+.s-casting
+	position: relative
+	background-image: url(../img/wcdf/casting-bg-sm.jpg)
+	background-color: white
+	background-size: cover
+	background-position: center center
+	//background-color: white
+	background-blend-mode: luminosity(red, 50%)
+	.s-casting-title
+		margin-top: 40px
+		text-align: center
+		padding-bottom: 33px
+		position: relative
+		h1
+			text-transform: uppercase
+			font-size: 42px
+			color: $main-color
+			position: relative
+		.border
+			width: 160px
+			height: 2px
+			background: $main-color
+			margin: 40px auto
+	.cast-item
+		padding: 12px
+		display: flex
+		justify-content: center
+		margin: 10px 10px 25px
+		text-align: left
+		position: relative
+		//align-items: center
+		&:after
+			content: '\f101 '
+			display: block
+			font-family: "FontAwesome"
+			position: absolute
+			color: grey
+			font-size: 8rem
+			opacity: .2
+			width: 50%
+			height: auto
+			@media only screen and (min-width: 768px)
+				right: -45%
+				top: -40%
+			@media only screen and (max-width: 768px)
+				right: -35%
+				top: -90%
+		.cast-img
+			align-self: top
+			width: 50px
+			display: inline-block
+			margin: 0 15px 0 0
+			float: left
+			img
+				max-width: 20px
+				margin: 0
+		.cast-text
+			color: $main-color
+			font-size: 20px
+			line-height: 1.4
+	.casting-date
+		color: $main-color
+		text-transform: uppercase
+		font-size: 44px
+		span
+			color: red
+
+
+
+.s-index-carousel
+	width: 100%
+	position: relative
+	.index-carousel-title
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translate(-50%, 50%)
+		z-index: 10
+		text-align: center
+		h1
+			font-family: $default-font-bold
+			text-transform: uppercase
+			line-height: 1
+			color: #fff
+			text-shadow: 2px 2px 5px #000
+			margin-bottom: 3%
+			@media only screen and (min-width: 992px)
+				font-size: 49px				
+			@media only screen and (max-width: 992px)
+				font-size: 23px
+			@media only screen and (max-width: 768px)
+				font-size: 29px						
+			@media only screen and (max-width: 500px)
+				//margin-top: -10px
+				font-size: 25px								
+		h4
+			color: #fff
+			font-size: 20px
+			margin-bottom: 3%
+		.button-red
+			font-size: 15px
+	.index-carousel
+		position: relative
+		.slider
+			position: relative
+			white-space: nowrap
+			@media screen and (min-width: 40em)
+				width: 100%
+				margin: 0 auto
+			.slide-bg
+				position: relative
+				width: 100%
+				background-size: cover
+				background-position: center center			
+				background-repeat: no-repeat
+				min-height: 80vh
+				white-space: nowrap
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background: rgba(#000,.5)				
+	.owl-nav
+		position: absolute
+		top: 50%
+		width: 100%
+		>	div
+			width: 64px
+			height: 64px
+			//background-color: #fff
+			color: #fff
+			position: absolute
+			text-align: center
+			line-height: 64px
+			font-size: 56px
+			&.owl-prev
+				left: 0
+				transition: all .25s ease-in-out
+				&:hover
+					opacity: .5
+			&.owl-next
+				right: 0
+				transition: all .25s ease-in-out
+				&:hover
+					opacity: .5
+	.owl-dots
+		position: absolute
+		bottom: 0
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			width: 24px
+			height: 24px 
+			margin: 0 2px
+			border-radius: 10em
+			background-color: #ddd
+			cursor: pointer
+			transition: background-color .25s ease
+			&.active
+				background-color: darkblue
+
+.s-requirements
+	position: relative
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.7)
+	.s-req-title
+		margin-top: 40px
+		text-align: center
+		padding-bottom: 33px
+		position: relative
+		h1
+			text-transform: uppercase
+			font-size: 42px
+			color: #fff
+			text-shadow: 2px 2px 3px #000
+			position: relative
+		.border
+			width: 160px
+			height: 2px
+			background: #fff
+			margin: 40px auto
+			text-shadow: 2px 2px 3px #000
+	.break
+		display: block
+		height: 20px
+	.item-req
+		background: rgba(255,255,255,.82)
+		padding: 25px 20px
+		color: $main-color
+		margin-bottom: 20px
+		@media only screen and (min-width: 992px)
+			height: 140px
+		.num
+			font-family: $default-font-regular
+			display: block
+			float: left
+			margin: 0 20px 0 0
+			font-size: 42px
+		.req-text
+
+
+
+
+.wcdf-gallery
+	padding: 30px 0
+	position: relative
+	width: 100%
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat	
+	.gallery-title
+		height: 100px
+	ul.photogallery
+		margin: 0 auto
+		text-align: center
+		//padding: 0
+		list-style-type: none
+		margin-bottom: 35px
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		li
+			flex-basis: fill
+			display: inline-block
+			//float: left
+			list-style-type: none
+			margin: 0
+			padding: 0
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+			@media only screen and (min-width: 992px)
+				width: 300px
+				height: 300px
+			@media only screen and (max-width: 992px)
+				width: 200px
+				height: 200px
+			@media only screen and (max-width: 500px)
+				width: 150px
+				height: 150px				
+	.link
+		
+.wcdf-video
+	padding: 35px 10px
+	background: deeppink
+	h1
+		color: #fff
+	.wcdf-video-container	
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center		
+		.wcdf-vid-item
+			position: relative
+			//min-width: 400px
+			iframe
+				flex: 1
+				//display: block
+				align-self: center
+				height: auto
+				@media only screen and (min-width: 992px)
+					min-width: 380px
+					max-width: 100%
+					min-height: 290px					
+				@media only screen and (max-width: 992px)
+					width: 280px
+					height: auto		
+				@media only screen and (max-width: 600px)	
+					width: 400px
+					height: 220px
+.contacts
+	margin-top: 3%
+	div
+		display: block
+	.phone
+		color: #fff
+		font-size: 33px
+		margin-bottom: 10px
+		span
+			font-size: 22px

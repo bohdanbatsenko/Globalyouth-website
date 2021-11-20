@@ -1,0 +1,174 @@
+@import "vars.sass"
+
+.s-title-bar
+	min-height: 200px
+	background-image: url(../img/contacts/ukraine_from_space.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	z-index: -1
+	@media only screen and (max-width: 768px)
+		min-height: 180px
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.5)
+		z-index: -1
+	.page-title
+		margin: 70px 20px
+		text-transform: uppercase
+		color: #fff
+		.contacts-title
+			font-size: 32px
+			font-weight: normal
+			@media only screen and (max-width: 768px)
+				font-size: 20px
+
+.s-interactive
+	.left-menu ul
+		list-style-type: none
+		border: 1px solid #bfbfbf
+	.left-menu
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+		//lex-shrink: 0 
+		li:not(:last-child)
+			border-bottom: 1px solid #bfbfbf
+		li
+			a
+				padding-left: 15px
+			&:nth-of-type(1)
+				a.active
+					background: #9ed765
+			&:nth-of-type(2)
+				a.active
+					background: #ed9988
+			&:nth-of-type(3)
+				a.active
+					background: #1cc9f7
+			&:nth-of-type(4)
+				a.active
+					background: #ffd17f
+				
+		a 
+			display: block
+			padding: 10px
+			color: #333
+			transition: all 0.5s ease-in-out
+				// &.active
+				// 	background: lightblue
+	a 
+		text-decoration: none
+
+	.interactive-map
+		//width: 100%
+		//height: 100vh
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			transition: all 0.5s ease-in-out
+			path.south
+				fill: #5d77c7
+			path.center
+				fill: #5d77c7
+			path.west
+				fill: #5d77c7
+			path.east
+				fill: #5d77c7
+			
+			a
+			g.city
+				path
+					color: #fff
+					// fill: black
+					// stroke: black
+
+
+		a
+			transition: all 0.5s ease-in-out
+			&.active
+				background-color: #bfbfbf		
+
+		&.active
+			background-color: #bfbfbf
+		
+	.info
+		margin-top: 15px
+		padding: 30px 20px
+		padding-bottom: 10px
+		//max-width: 50%
+		border: 1px solid #bfbfbf
+		transition: all .5s ease-in-out
+		h2
+			text-align: left
+			margin-bottom: 20px
+		p
+			text-align: left
+
+
+
+
+.s-contacts
+	text-align: center
+	h2.contacts-title
+		font-family: $titles-font-light
+		margin: 50px 20px
+
+$colors: pink, limegreen, lightblue, orange
+@for $i from 1 through length($colors)
+	.contacts-wrap p:nth-child(#{length($colors)}n+#{$i})
+		span
+			color: nth($colors, $i)
+	.contacts-wrap
+		width: 70%
+		margin: 0 auto
+		text-align: center
+		font-size: 17px
+		margin-bottom: 30px
+	.contacts-map-wrap
+		width: 70%
+		margin: 0 auto
+		margin-top: 60px
+		grid-template-columns: 1fr 3fr
+		@media (max-width: 700px)
+			grid-template-columns: 1fr
+		.map-left
+			border-right: 1px solid #dadada
+			padding-right: 50px		
+			@media (max-width: 700px)	
+				border: none
+			h3.branches
+				font-size: 18px
+				margin-top: 0
+				padding-top: 0
+				text-transform: uppercase
+				color: orange
+			ul.branches-list
+				list-style-type: none
+				padding-top: 35px
+				padding: 0
+				margin: 0
+				font-size: 16px
+				li
+					display: block
+					text-align: center
+		.map-right
+			padding-left: 40px
+
+
+	img
+		margin-top: 40px
+		display: inline-block
+		max-width: 80%
+	.requisite
+		h2

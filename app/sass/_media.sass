@@ -1,0 +1,91 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.top-mnu
+		ul
+			display: none
+	.header-wrap
+		padding-bottom: 22px
+
+	.s-jap-program
+		.carousel-japprogram-item
+			flex-direction: column
+	.s-rio-program
+		.carousel-rioprogram-item
+			flex-direction: column			
+// ≥992px
++media-breakpoint-down(md)
+	.ishome h1
+		font-size: em(34)
+	.s-profile .col-md-6:last-child
+		.button
+			margin-top: 20px
+
+	.header-wrap-korean
+		.event-description
+			display: none
+
+// ≥768px
++media-breakpoint-down(sm)
+	// on gnc header section
+	// .main-header
+	// 	&:after
+	// 		flex: 1 1 10%	
+	// 	.header-gnc-left
+	// 		flex: 1 1 90%
+
+	.header-wrap-rio 
+		padding-left: 20px
+		padding-right: 20px
+	.header-wrap-rio .header-flex-rio .flex-center .header-composition .k-pop-concert-img img
+		width: 280px	
+	.s-venue 
+		.venue-top
+			margin-bottom: 30px
+			.tabs .tab
+				padding: 0 10px
+	.ishome
+		h2
+			font-size: em(28px)
+	.header
+		.logo
+			padding: 12px 0 5px 25px
+			a
+				img 
+					width: 130px
+					height: auto
+	.header-wrap-japan .header-flex-japan .flex-center 
+		.header-composition
+			background-color: rgba(#fff, .8)
+			border: 10px solid #fff
+			.h1_culture
+				font-size: 40px!important
+// ≥576px
++media-breakpoint-down(xs)
+	.s-venue 
+		.venue-top
+			margin-bottom: 80px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+	.ishome h1
+		font-size: 12px
+
+// ≤768px
++media-breakpoint-up(md)
+
+
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
+	.hamburger
+		display: none

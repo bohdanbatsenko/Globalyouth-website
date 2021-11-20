@@ -1,0 +1,99 @@
+@import "vars.sass"
+
+.s-intro-president.grid
+	@media (min-width: 700px)
+		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr
+	.intro-president-wrap
+		margin-top: 40px
+		grid-column: 2/4
+		padding: 0 1.5em
+		position: relative
+		.president-wrap
+			padding-bottom: 3em
+			.quotes	
+				position: absolute
+				width: 100%	
+				&::before, &::after
+					content: ',,'
+					//top: 100px
+					display: block
+					font-size: 56px
+					font-family: 'Times New Roman', serif
+					font-weight: bold
+					line-height: 0
+					position: absolute
+					color: #000
+					transform: rotate(180deg)
+				&::before
+					top: 100px
+					left: -60px
+				&::after
+					top: 170px
+					right: -20px
+					transform: rotate(0)
+			.pres-heading
+				font-family: $default-font-italic
+				text-transform: uppercase
+				font-size: 20
+			.pres-text
+				text-align: justify
+				font-family: $default-font-italic
+				font-size: 16px
+				span
+					display: inline-block
+					margin-left: 100px
+
+		.team-wrap
+			padding: 0 1.5em
+			.team-title
+				margin-bottom: 50px
+				font-family: $titles-font-light2
+				text-transform: uppercase
+				font-size: 24px
+			.team-wrap-wrapper
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				@media only screen and (max-width: 700px)
+					flex-direction: column
+				.team-item
+					flex: 32%
+					//margin: 0
+					margin-bottom: 40px
+					&:hover
+						.rounded-img-wrap
+							transform: scale(1.10)
+						.iv-phone
+							color: lighten($brand-kor-purple, 20%)				
+					.rounded-img-wrap
+						border-radius: 10em
+						border: lighten($brand-kor-purple, 20%) 3px solid
+						overflow: hidden
+						width: 135px
+						height: 135px
+						text-align: center
+						margin: auto
+						transition: all .5s ease-in-out
+						background-size: cover
+						background-position: center center
+						background-repeat: no-repeat
+					.iv-phone
+						color: #999
+						font-family: $titles-font-bold, sans-serif
+						font-size: em(17px)
+						transition: all .5s ease-in-out
+						margin-top: 0
+						i
+							font-size: 19px
+							margin-right: 3px
+					h3
+						font-size: em(19px)
+						font-family: $titles-font-bold, sans-serif
+						color: #444
+						margin-top: 40px
+						margin-bottom: 10px
+					p
+						font-size: em(14px)
+						color: #666
+						letter-spacing: 1.6px
+						margin-top: 0

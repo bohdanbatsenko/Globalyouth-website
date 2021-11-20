@@ -1,0 +1,322 @@
+@import "vars.sass"
+
+.header-wrap-rio
+	margin-top: 0
+	position: relative
+	padding-bottom: 50px
+	min-height: 560px
+	height: 100vh
+	width: 100%
+	background:
+		image: url(../img/rio/rio-left2.png), url(../img/rio/rio-right2.png), url(../img/rio/rio.svg), url(../img/rio/bg_rio_clean.jpg)
+		position: bottom left, bottom right, top, center
+		repeat: no-repeat
+		size: 29%, 29%, cover, cover
+		blend-mode: screen, screen, overlay, multiply
+	@media screen and (max-width : 992px)
+		background-size: 25%, 25%, cover, cover
+	.header-flex-rio
+		display: flex
+		height: 100%
+		position: relative
+		//top: 0
+		.flex-center
+			margin: auto	
+			.header-composition
+				text-align: center
+				position: relative
+				.rio-top-wrap
+					text-align: center
+					margin-bottom: 25px
+					.rio-title-top
+						display: inline-block
+						font-size: 16px
+						padding: 0 10px
+						line-height: 15px
+						white-space: nowrap
+						position: relative
+						&:first-child
+							span:last-child
+								position: relative
+							&:after
+								content: '|'
+								position: absolute
+								top: 40px
+								right: -9px
+								color: #fff
+								font-size: 33px
+						&:first-child .h2-title-top
+							&:before
+								content: 'м. Київ'
+								position: absolute
+								top: -20px
+								left: 0
+								width: 100%
+								color: #fff
+								font-family: $titles-font-light
+								height: auto
+								font-size: 15px
+								opacity: .8
+							&:after
+								content: 'вул. Саксаганського, 6'
+								position: absolute
+								top: 45px
+								right: 0
+								width: 100%
+								color: #fff
+								font-family: $titles-font-light
+								height: auto
+								font-size: 15px
+								opacity: .8							
+						&:last-child .h2-title-top
+							&:before
+								content: 'м. Львів'
+								position: absolute
+								top: -20px
+								width: 100%
+								color: #fff
+								font-family: $titles-font-light
+								height: auto
+								font-size: 15px
+								opacity: .8		
+							&:after
+								content: 'пл. Петрушевича, 2'
+								position: absolute
+								top: 45px
+								right: 0
+								width: 100%
+								color: #fff
+								font-family: $titles-font-light
+								height: auto
+								font-size: 15px
+								opacity: .8																							
+						.h2-title-top
+							display: inline-block
+							font-family: $titles-font-light
+							color: #fff
+							position: relative
+						.fa
+							display: inline-block
+							color: $accent
+							font-size: 15px
+							margin: 0 10px
+							transform: translateY(-50%)
+						span
+							display: inline-block
+							font-family: $titles-font-bold
+							margin: 0 2px
+							color: $yellow-color
+							font-size: 35px
+				.k-pop-concert-img
+					img
+						max-width: 100%
+						height: auto
+				.rio-logo
+				.rio-dorama
+					font-size: 23px
+					font-weight: 800
+					color: #fff
+	.arrow-wrap
+		top: 15px
+
+
+
+
+$rio_colors: $rio_blue, $rio_red, $rio_accent
+@for $i from 1 through length($rio_colors)
+	.carousel-rioprogram .owl-item:nth-child(#{length($rio_colors)}n+#{$i})
+		background-color: nth($rio_colors, $i)
+
+.s-jap-timer
+	text-align: center
+	span
+		font-family: $default-font-light
+		font-size: 26px
+		color: #666
+	strong
+		font-family: $default-font-bold
+		color:  darken($rio_red, 5%)
+		font-size: 32px	
+		text-transform: uppercase
+	.button
+		margin-top: 15px
+
+	#japanday
+		text-align: center
+	.is-countdown
+		border: none
+		background-color: rgba(255,255,255,.0)
+		font-family: $titles-font-regular
+		color: #666
+		.countdown-row
+			.countdown-section
+				.countdown-amount
+					color: darken($rio_red, 5%)
+					font-family: $titles-font-bold
+					font-size: 53px
+				.countdown-period
+					font-size: 28px
+					font-family: $titles-font-light
+
+
+.s-rio-program
+	.carousel-rioprogram
+		background-color: rgba(#ddd, .7)
+		&-item
+			color: #fff
+			font-size: 18px
+			font-family: $default-font-light
+			position: relative
+			display: flex
+			flex-direction: column-reverse
+			&:hover
+				.carousel-rioprogram-image
+					opacity: 1
+			.dorama-ost-logo
+				text-align: center
+				img
+					width: 190px
+					height: auto
+					display: inline-block
+					opacity: .6
+
+		.owl-item
+			&:nth-child(2n+2)
+				.carousel-rioprogram-item						
+					flex-direction: column
+
+		&-image
+			background-size: cover
+			background-position: center
+			//opacity: .7
+			transition: opacity .5s ease
+
+		&-content
+			position: relative
+			padding: 60px 10%
+
+		&-composition
+			margin: auto
+			text-align: center
+			width: 100%
+			height: auto
+			.h3-kpop
+				text-transform: uppercase
+				font-family: $default-font-bold
+				font-size: 28px
+				margin-top: 5%
+				margin-bottom: 20px
+			.rio_descr
+				padding: 9px
+				//border-bottom: 1px solid rgba(#fff, .22)
+			.rio_logo_white
+				display: flex
+				align-items: center
+				white-space: nowrap
+				margin: 0
+				margin-bottom: 3px			
+				span
+					margin: 0 10px
+				img
+					max-width: 250px
+					height: auto
+				&::before, &::after
+				 content: ''
+				 width: 100%
+				 height: 1px
+				 position: relative
+				 background-color: #fff
+				 display: inline-block			
+	.owl-nav
+		position: absolute
+		top: 0
+		width: 100%
+		>	div
+			width: 64px
+			height: 64px
+			background-color: #fff
+			color: $main-color
+			position: absolute
+			text-align: center
+			line-height: 64px
+			font-size: 26px
+			&.owl-prev
+				left: 0
+			&.owl-next
+				right: 0
+
+
+.owl-carousel
+	.owl-item
+		backface-visibility: inherit
+
+
+.s-venue
+	text-align: center
+	.venue-top
+		h2
+			display: inline-block
+			font-size: 27px
+			font-family: $default-font-light
+			text-transform: uppercase
+			vertical-align: middle
+			margin-bottom: 0
+			height: 45px
+			line-height: 45px
+		.tabs
+			display: inline-block
+			vertical-align: middle
+			height: 45px
+			line-height: 45px
+			margin-left: 30px
+			.tab
+				float: left	
+				padding: 0 45px
+				border: $rio_blue 5px solid
+				line-height: 38px
+				font-family: $default-font
+				text-transform: uppercase
+				cursor: pointer
+				color: $rio_blue
+				&:first-child
+					border-radius: 3px 0 0 3px
+				&:last-child
+					border-radius: 0 3px 3px 0
+				&.active
+					background-color: $rio_blue
+					color: #fff
+	.wrapper
+		margin-top: 45px
+	.v-item-icon,
+	.v-item-content
+		display: inline-block	
+		vertical-align: middle
+	.v-item-wrap
+		font-family: $default-font-regular
+		color: #666
+		padding: 20px 0
+		.fa
+			font-size: 42px
+			color: #666
+			line-height: 45px
+			margin-right: 13px
+		.v-item-content
+			text-align: left
+			line-height: 1.5
+			span
+				display: block
+				font-size: 18px
+			strong
+				display: block
+				font-size: 20px
+				font-family: $default-font-bold
+				color: $rio_red
+				&.metro
+					color: $rio_red
+				&.address
+					color: $rio_red
+					font-size: 17px
+				&.time
+					color: $rio_red
+				&.phone
+					color: $rio_red

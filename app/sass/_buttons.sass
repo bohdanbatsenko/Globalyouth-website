@@ -1,0 +1,72 @@
+@import "vars"
+@import "fonts"
+	
+%button
+	display: inline-block
+	border:none
+	color: #fff
+	font-size: em(14px)
+	letter-spacing: 2px
+	text-transform: uppercase
+	text-decoration: none
+	padding: 14px 25px
+	border-radius: 3px
+	transition: all .25s ease
+	&:hover, &:focus
+		color: #fff
+		text-decoration: underline
+	&:active
+		transform:translateY(4px)
+
+.button-yellow
+	@extend %button
+	background: #f6b91b
+	box-shadow: 0 4px 0 darken(#f6b91b, 5%)
+	&:hover
+		background-color: lighten(#f6b91b, 10%)
+	&:focus
+		background-color: darken(#f6b91b, 15%)		
+.button
+	@extend %button
+	background-color: $btn
+	box-shadow: 0 4px 0 darken($btn, 5%)
+	&:hover
+		background-color: lighten($btn, 10%)
+	&:focus
+		background-color: darken($btn, 15%)	
+
+
+.button-green
+	@extend .button
+	background-color: green
+	box-shadow: 0 4px 0 darken(green, 15%)
+	&:hover
+		background-color: darken(green, 10%)
+	&:active
+		background-color: darken(green, 15%)
+	&:focus
+		background-color: darken(green, 15%)
+.button-red
+	@extend .button
+	background-color: red
+	font-family: $default-font-bold
+	font-size: 22px
+	box-shadow: 0 4px 0 darken(red, 15%)
+	&:hover
+		background-color: darken(red, 25%)
+	&:active
+		background-color: darken(red, 30%)
+	&:focus
+		background-color: darken(red, 30%)
+	&.small
+		font-size: 16px
+.button-blue
+	@extend .button
+	background-color: #0368a5
+	font-family: $default-font-bold
+	font-size: 22px
+	box-shadow: 0 4px 0 darken(#0368a5, 10%)
+	&:hover
+		background-color: darken(#0368a5, 15%)
+	&:active
+		background-color: darken(#0368a5, 20%)

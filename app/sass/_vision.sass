@@ -1,0 +1,109 @@
+@import "vars.sass"
+
+.s-vision-intro
+	height: 300px
+	background-image: url(../img/vision/bg-vision.jpg)
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	display: flex
+	flex-direction: column
+	justify-content: center
+	.s-vision-intro-content
+		text-align: right
+		h1
+			margin: 0 auto
+			padding: 10px 20px
+			align-content: right
+			display: inline-block
+			color: #fff
+			text-transform: uppercase
+			text-shadow: 2px 3px 2px #000
+
+.s-vision
+	margin: 0 15px
+	.s-vision-wrap
+		width: 80%
+		margin: 0 auto
+		.s-vision-item
+			width: 90%
+			margin: 0 auto
+			padding: 18px
+			display: flex
+			flex-direction: row
+			justify-content: top
+			@media only screen and (max-width : 768px)
+				flex-direction: column				
+			.vision-item-left
+				display: flex
+				flex-direction: column
+				justify-content: flex-end
+				flex-wrap: no-wrap
+				margin-right: 29px
+				img
+					display: block
+					//min-width: 180px
+					//height: auto
+				img.mission-left
+					width: 280px
+					height: auto
+					border-radius: 20px
+				img.vision-left
+					width: 180px
+					height: auto
+					border-radius: 20px
+				img.mission
+					display: block
+					min-width: 160px
+					height: auto
+					border-radius: 20px
+					margin-bottom: 0
+					margin-top: 10px
+					padding-bottom: 0
+			.vision-item-right.item-vision
+				display: flex
+				justify-content: center
+				h2.vision-title
+					align-self: center
+					font-size: 38px
+			.vision-item-right
+				text-align: left	
+				margin: 0
+				h2.title-mission
+					font-size: 38px
+				h2
+					font-family: $titles-font-bold2
+					display: inline-block
+					font-size: 38px
+					text-transform: uppercase
+					color: green
+					margin: 0
+					padding: 0
+					color: $green-light
+				h3
+					font-family: $titles-font-bold2
+					display: inline-block
+					font-size: 26px
+					text-transform: uppercase
+					color: green
+					margin: 0
+					padding: 0
+					color: $green-light	
+					&.education
+						color: $jap_blue	
+					&.society
+						color: $headers-color
+					&.culture
+						color: $rio_blue
+				p
+					font-size: 20px
+					text-indent: 2em
+					line-height: 1.2
+					text-align: justify
+					margin-bottom: 0
+					padding-bottom: 0
+		img.vision-core
+			width: 90%
+			margin: 30px 0
+			display: block
+			float: right

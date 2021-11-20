@@ -1,0 +1,21 @@
+@import "vars.sass"
+
+.s-news
+	position: relative
+	&:after
+		content: ''
+		clear: both
+		display: table
+	h1
+		margin-bottom: 50px
+.news-wrap
+	display: grid
+	max-width: 1280px
+	grid-template-columns: repeat(3, 1fr)
+	@media only screen and (max-width : 768px)
+		grid-template-columns: 1fr
+	.news-item
+		max-width: 33%
+		margin: 5px
+
+

@@ -1,0 +1,899 @@
+@import "vars.sass"
+
+
+.gyf-header
+	height: 100%
+	//max-height: 700px
+	position: relative
+	//height: 94vh
+	@media only screen and (min-width: 768px)
+		background: url(../img/gyf/gyf_20_bg.jpg) no-repeat
+		background-size: cover
+		background-position: center center
+		min-height: 94vh
+		.flex-center
+			padding-top: 4%
+			.header-composition
+				text-align: left
+				font-size: 3em
+				.gyf-left
+					width: 700px
+					img
+						max-width: 100%
+		.gyf-left img
+			width: 60%
+			margin: 0 auto
+		img.gyf-right
+			width: 45%
+			margin: 0 auto
+	@media only screen and (max-width: 768px)
+		background: url(../img/gyf/gyf_20_bg_sm.jpg) no-repeat
+		background-position: center bottom
+		background-size: cover
+		padding-bottom: 5%
+		height: 100vh
+		.flex-center
+			padding-top: 3em
+			//padding-bottom: 5em
+			.header-composition
+				font-size: 1.2em
+				text-align: center
+			img
+				width: 50%
+				margin: 0 auto
+	.header-composition
+		font-family: $default-font-medium
+		text-transform: uppercase
+		line-height: 1.4
+		margin-bottom: 1em
+		.febr
+			display: inline-block
+			padding: 1% 2%
+			box-sizing: border-box
+			color: #ee1d51
+			background: rgba(#fff,.7)
+		.comeback
+			display: inline-block
+			padding: 0 2%
+			box-sizing: border-box
+			color: #10887d
+			background: rgba(#fff,.7)
+	.header-social
+		position: absolute
+		display: flex
+		justify-content: center
+		border-left: rgba(#3d4478,.7) 1px solid
+		height: 100%
+		right: 0
+		top: 0
+		padding: 0 6px
+	.soc
+		margin: auto
+		ul, li
+			margin: 0
+			padding: 0
+			list-style-type: none
+		a
+			color: #3d4478
+			font-size: 17px
+			display: block
+			background-color: rgba(255,255,255,.2)
+			height: 38px
+			width: 38px
+			text-align: center
+			margin: 18px 0
+			line-height: 38px
+			border-radius: 10em
+			border: #3d4478 1px solid
+			transition: background-color .25s ease
+			&:hover
+				background-color: rgba(255,255,255,.8)
+.header-contacts
+	position: absolute
+	bottom: 0
+	left: 0
+	border-top: #3d4478 1px solid
+	padding: 10px 0 20px
+	width: 100%
+	color: #3d4478
+	line-height: 1.3
+	background: rgba(#fff,.8)
+	.phone
+		display: inline-block
+		float: left
+		line-height: 38px
+	.gyf-header-logos
+		margin-top: 10px
+		.gyf-header-logo
+			display: inline-block
+			float: left
+			width: 10%
+			//margin-right: 2px
+			// &:nth-child(5)
+			// 	width: 10%
+			// &:last-child
+				// width: 12%
+			img
+				margin-top: 0
+				max-width: 60%
+
+	@media only screen and (max-width: 768px)
+		font-size: 11px
+		
+	.soc
+		ul li
+			display: inline-block
+			a
+				display: inline-block
+				float: left
+				margin: 0
+				border-radius: none
+				border: none
+
+
+
+
+.s-gyf-index
+	display: flex
+	width: 100%
+	height: 100%
+	background-image: radial-gradient(white 50%, lightgrey)
+	padding: 0
+	margin: 0
+	position: relative
+	overflow: hidden
+	@media only screen and (min-width: 600px)
+		min-height: 50vh
+	// @media only screen and (max-width: 600px)
+		// background: url(../img/gyf/gyf-index-bg2.png) no-repeat
+		// background-position: center bottom
+		// background-size: 80%	
+		// min-height: 88vh	
+	&:after
+		@media only screen and (min-width: 600px)
+			content: ''
+			display: block
+			flex: 1 1 50%
+			background: url(../img/gyf/gyf-index-bg2.png) no-repeat
+			background-position: right bottom
+			background-size: contain
+			margin-bottom: -40px
+		@media only screen and (min-width: 1490px)
+			background-size: 60%
+	.header-gyf-left
+		flex: 1 1 50%
+		width: 100%
+		position: relative
+		padding-bottom: 25px
+		height: 100%
+		.header-left-content
+			padding-top: 8%
+			width: 100%
+			height: 100%
+			margin-left: 15px
+			margin-right: 15px
+			text-align: center
+			position: relative			
+			.gyf-logo
+				img
+					display: block
+					margin: 0 auto
+					max-width: 100%
+					height: auto
+					margin-bottom: 30px
+					@media only screen and (max-width: 500px)
+						width: 220px
+					@media only screen and (min-width: 500px)
+						width: 260px
+					@media only screen and (min-width: 992px)
+						width: 300px
+			.header-gyf-text
+				display: inline-block
+				font-size: 18px
+				color: #3d4377
+				line-height: 1.5
+				position: relative
+				height: 100%
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: -30px
+					display: block
+					width: 20px
+					height: 88px
+					background: url(../img/gyf/bracket.svg) no-repeat
+					background-size: contain
+					background-position: center center
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					right: -35px
+					display: block
+					width: 20px
+					height: 88px
+					background: url(../img/gyf/bracket.svg) no-repeat
+					background-size: contain
+					background-position: center center
+					transform: rotate(180deg)
+				span.city
+					color: #ff004c
+					font-family: $default-font-bold
+			.gyf-img
+				width: 100%
+				height: 100%
+				margin-bottom: -30px
+				@media only screen and (min-width: 600px)
+					display: none
+			.header-social
+				display: flex
+				//width: 90%
+				padding: 5px 0
+				.soc
+					margin: auto
+					ul, li
+						margin: 0
+						padding: 0
+						list-style-type: none
+						li
+							display: inline-block
+							margin-right: 17px
+							a
+								display: inline-block
+								color: #3d4377
+								font-size: 17px
+								background: rgba(#fff, .2)
+								width: 38px
+								height: 38px
+								text-align: right
+								line-height: 38px
+								border-radius: 10em
+								transition: background-color .25s
+								&:hover
+									background: rgba(#fff, .4)
+								i
+							span
+								display: inline-block 
+								margin-left: 5px
+								color: #3d4377
+								font-family: $default-font-bold
+
+.s-landing-partners
+	padding: 5% 30px 30px
+	.landing-suppport-wrap
+		min-height: 100px
+		margin-bottom: 15px
+		display: flex
+		justify-content: flex-start
+		@media screen and (max-width : 568px)
+			flex-direction: column	
+		.landing-support-item
+			margin-right: 10px
+			box-sizing: border-box
+			&:last-of-type
+				margin-right: 0
+			@media screen and (min-width : 568px)
+				margin-top: 19px
+				border-left: 1px solid rgba(0,0,0,.2)
+				padding: 0 10px 0 20px
+				&:first-of-type
+					flex: 35%
+					border-left: none
+			.support-item-descr
+				text-align: center
+				h3
+					font-size: 13px
+					@media screen and (min-width : 568px)
+						margin-top: -15px
+			.nowrap
+				white-space: nowrap
+			.support-item-logos
+				text-align: center
+				.item-logo
+					display: inline-block
+					width: 100px
+					height: 50px
+					background-size: contain
+					background-position: center center
+					background-repeat: no-repeat
+					margin-bottom: 10px
+				// .mon
+				// 	width: 200px
+				// 	height: 100px
+				// 	p
+				// 		font-size: 12px
+				// 		line-height: 1	
+				// .uyf
+				// 	width: 55px				
+				// .imei
+				// 	width: 55px
+				// 	margin-left: 5px
+
+.s-gyf-tabs
+	padding-top: 40px
+	border-bottom: 3px solid #3d4377
+	height: 100%
+	.container-gyf-tabs
+		width: 100%
+		height: 100%
+		margin: 0 auto
+	.tabs
+		display: flex
+		flex-wrap: wrap
+		// grid-template-columns: repeat(3, 1fr)
+		// grid-gap: 1rem
+		align-items: center
+		justify-content: center
+		text-align: center
+		padding: 0 30px
+		//min-height: 72px
+
+		// display: inline-block
+		// vertical-align: middle
+		// height: 45px
+		// line-height: 45px
+		// margin-left: 30px
+		@media only screen and (min-width: 600px)
+			flex-wrap: nowrap
+		.tab
+			//float: left	
+			font-size: 24px
+			padding: 0 45px
+			//border: solid 5px #3d4377
+			font-family: $default-font
+			text-transform: uppercase
+			cursor: pointer
+			color: #00a2ff
+			transition: all .25s ease
+			height: 100%
+			overflow: hidden
+			min-height: 72px
+			&:first-child
+				//border-radius: 12px 0 0 12px
+			&:last-child
+				//border-radius: 0 12px 12px 0
+			&.active
+				// background-color: #3d4377
+				color: #3d4377
+				border-bottom: solid 5px yellow
+			@media only screen and (min-width: 600px)
+				line-height: 33px
+				font-size: 33px
+				padding: 15px 35px
+	.wrapper
+		//background: lighten(#00a2ff,10%)
+		margin: auto
+		height: 100%
+		overflow: hidden
+		position: relative
+		.tab_item
+			width: 100%
+			height: 100%
+			min-height: 500px
+			position: relative
+			animation: tab-item-animation
+			transition: opacity .75s linear
+		.poltava
+			position: relative
+			background: #e85353
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				background: url(../img/gyf/gyf-tabs/sveta_bg.png) no-repeat
+				background-size: 70%
+				background-position: left -45% top 45%
+				filter: grayscale(100%)
+				opacity: .4
+				overflow: hidden
+				@media only screen and (min-width: 1200px)
+					background-position: left -50% top 45% 
+				@media only screen and (max-width: 600px)
+					background-position: left -45% bottom
+		.kyiv
+			position: relative
+			background: #11b009
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				background: url(../img/gyf/gyf-tabs/nastia_bg.png) no-repeat
+				background-size: 70%
+				background-position: right -45% top 45%
+				filter: grayscale(100%)
+				opacity: .4
+				@media only screen and (min-width: 1200px)
+					background-position: right -45% top
+				@media only screen and (max-width: 600px)
+					background-position: right -45% bottom
+		.harkiv
+			position: relative
+			background: #d05f5f url(../img/gyf/gyf-tabs/ola_bg_trsp.png) no-repeat
+			background-size: 70%
+			background-position: right -40% bottom 5%
+			@media only screen and (min-width: 1200px)
+				background-position: right -45% top
+			@media only screen and (max-width: 600px)
+				background-position: right -45% bottom			
+			// &:before
+			// 	content: ''
+			// 	position: absolute
+			// 	width: 100%
+			// 	height: 100%
+				// background: url(../img/gyf/gyf-tabs/ola_bg.png) no-repeat
+				// background-size: 70%
+				// background-position: left -45% top 45%
+				// filter: grayscale(100%)
+				// opacity: .4
+			.s-landing-partners
+				padding-top: 30px
+				background: #fff
+				@extend .s-landing-partners
+		.odesa
+			position: relative
+			background: #ffdd00
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				background: url(../img/gyf/gyf-tabs/olia_linkevych_bg.png) no-repeat
+				background-size: 70%
+				background-position: left -45% top 45%
+				filter: grayscale(100%)
+				opacity: .4
+				@media only screen and (min-width: 1200px)
+					background-position: left -35% top
+				@media only screen and (max-width: 600px)
+					background-position: left -45% bottom
+			.tab_item_left .back2Ukraine
+				color: #ff5151
+			.tab_item_left .city
+				color: #ff5151
+			.tab_item_left .date
+				color: #ff5151
+		.vinnytsia
+			position: relative
+			background: lighten(#00a2ff,10%)
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				background: url(../img/gyf/gyf-tabs/katya2.png) no-repeat
+				background-size: 40%
+				background-position: right bottom
+				//background-position: right -45% top 45%
+				// /filter: grayscale(100%)
+				//opacity: .4
+				@media only screen and (min-width: 1500px)
+					background-position: right bottom
+					background-size: 25%
+				@media only screen and (min-width: 1200px)
+					background-position: right bottom
+					background-size: 45%
+				@media only screen and (max-width: 600px)
+					display: none
+					//background-position: right -45% bottom			
+		.ternopil
+			position: relative
+			background: #ab23d7 url(../img/gyf/gyf-tabs/alina_bg_trsp.png) no-repeat
+			background-size: 70%
+			background-position: right -45% top 45%
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				//background: url(../img/gyf/gyf-tabs/alina_bg.png) no-repeat
+				// background-size: 70%
+				// background-position: right -45% top 45%
+				// filter: grayscale(100%)
+				// opacity: .4
+				@media only screen and (min-width: 1200px)
+					background-position: right -45% top
+				@media only screen and (max-width: 600px)
+					background-position: right -45% bottom	
+			.tab_item_left
+				padding-bottom: 0
+				margin-bottom: 0
+				padding-bottom: .5rem
+				.logo-top-line
+					margin-bottom: 25px
+					animation: tab-animation .25s
+					transition: all .25s ease
+					position: relative							
+					img
+						display: inline-block
+						width: 120px
+						margin-right: 25px
+						&:first-child
+							width: 90px
+				.back2Ukraine
+					font-size: 24px
+					line-height: 1
+					margin-bottom: 0
+					img
+						display: inline-block
+						margin-top: 15px
+						width: 70%
+						height: auto
+				.date
+					@media only screen and (max-width: 600px)
+						margin-bottom: -20px
+				.podoliany
+					display: inline-block
+					padding-top: 0
+					padding-bottom: 15px
+					width: 50%
+					max-width: 240px
+					animation: tab-animation .65s
+					transition: all .25s ease
+					position: relative							
+					@media only screen and (max-width: 600px)
+						margin: 0 auto
+						img
+							text-align: center
+					img
+						display: inline-block
+			.tab_item_right
+				@media only screen and (max-width: 600px)
+					text-align: center
+					img
+						right: -50px
+				.img-wrap
+					width: 80%
+					text-align: center
+					@media only screen and (min-width: 600px)
+						margin-top: 35%
+						img
+							margin-top: 5%
+					img
+						display: inline-block
+						margin: 0 auto
+		// logo ternopil
+			.logo-bottom-line
+				text-align: center
+				padding-top: 0
+				margin-top: -25px
+				margin-bottom: 35px
+				padding-left: 1rem
+				padding-right: 1rem
+				transition-delay: 1s
+				animation: tab-animation .8s
+				transition: all .25s ease
+				position: relative					
+				@media only screen and (min-width: 600px)
+					text-align: left				
+				img
+					display: inline-block
+					width: 50px
+					margin-right: 15px
+					&:nth-of-type(1)
+						width: 95px
+					&:nth-of-type(2)
+						width: 75px
+					&:nth-of-type(7),
+					&:nth-of-type(8)
+						width: 45px
+					&:nth-of-type(9),
+					&:nth-of-type(10),
+					&:nth-of-type(11)
+						width: 36px
+					&:nth-of-type(12),
+					&:nth-of-type(13)
+						width: 35px
+					@media only screen and (max-width: 600px)
+						width: 50px
+					//height: auto
+					//max-width: 100%
+		.s-landing-partners
+			background: #fff
+			padding-top: 30px
+			@extend .s-landing-partners
+
+	
+	
+		.tab_item_left
+			display: flex
+			flex-direction: column
+			justify-content: space-evenly
+			padding: 2rem 1rem
+			height: 100%
+			@media only screen and (max-width: 600px)
+				text-align: center				
+			@media only screen and (min-width: 600px)
+				align-items: left
+				text-align: left
+			&.reverse
+				text-align: right
+			.back2Ukraine
+				display: inline-block
+				font-size: 30px
+				color: yellow
+				transition-delay: .2s
+				animation: tab-animation .25s
+				transition: all .25s ease
+				position: relative
+				@media only screen and (max-width: 600px)
+					margin: 0 auto
+					text-align: center								
+			.city
+				color: yellow
+				margin: 0
+				padding: 0
+				font-size: 40px
+				font-family: $default-font-bold
+				text-transform: uppercase
+				animation: tab-animation .45s
+				transition: all .25s ease
+				position: relative	
+				@media only screen and (max-width: 600px)
+					margin: 0 auto
+					text-align: center					
+				@media only screen and (min-width: 600px)
+					font-size: 65px
+
+			.date
+				color: yellow
+				font-size: 40px
+				line-height: 40px
+				margin: 0
+				padding: 0
+				margin-bottom: 15px
+				animation: tab-animation .65s
+				transition: all .25s ease
+				position: relative					
+				@media only screen and (max-width: 600px)
+					text-align: center
+				@media only screen and (min-width: 600px)
+					font-size: 65px
+					//line-height: 5px
+			.contacts
+				font-size: 15px
+				margin-top: 10px
+				line-height: 1.6
+				animation: tab-animation .85s
+				transition: all .25s ease
+				position: relative	
+				@media only screen and (max-width: 600px)
+					margin: 0 auto
+					text-align: center									
+			.logo-wrap
+				// display: flex
+				flex-direction: row
+				//justify-self: flex-end
+				img
+					display: inline-block
+					width: 50px
+					margin: 4% 15px 5px 0
+				img.gy-logo
+					width: 105px
+		.tab_item_right
+			display: flex
+			justify-content: center
+			align-items: center
+			.img-wrap
+				width: 70%
+				align-items: center
+				align-self: center
+				justify-self: center
+				@media only screen and (min-width: 600px)
+					margin-top: 10%
+				img
+					display: inline-block
+					animation: tab-animation-img 1s
+					transition: all .3s ease
+					position: relative
+@keyframes tab-animation
+	0%
+		left: 100px
+	100%
+		left: 0
+@keyframes tab-item-animation
+	0%
+		opacity: 0
+		//left: 200px
+	100%
+		opacity: 1
+		//left: 0
+			
+@keyframes tab-animation-img
+	0%
+		transform: scale(.7)
+	100%
+		transform: scale(1)
+
+
+.gyf-text-intro
+	text-align: center
+	padding: 40px 35px
+	.gyf-intro-wrap
+		display: flex
+		justify-content: center
+		flex-direction: row
+		position: relative
+		margin-bottom: 35px
+		.left, .right
+			content: ''
+			height: 1px
+			width: 25%
+			margin-top: 7%
+			background-color: #3d4377
+			display: inline-block
+			position: relative
+			@media only screen and (max-width: 500px)
+				display: none
+		.left
+			margin-right: 20px
+		.right
+			margin-left: 20px
+		img
+			flex: 1 1 30%
+			display: block
+			width: 130px
+			height: auto
+			//position: relative
+	.gyf-text
+		padding-bottom: 25px
+		p
+			text-align: justify
+			text-indent: 25px
+
+		p.bold
+			font: $default-font-bold
+			font-weight: 1000
+			color: #3d4377
+	.button-red
+		background: #ff004c
+		margin: 0 auto
+
+.carousel-section
+	padding: 40px 0
+	.carousel-title-wrap
+		margin: 0 40px 15px
+		h1.carousel-title
+			font-family: $default-font-regular
+			text-transform: uppercase
+			color: $main-color
+		.border
+			display: inline-block
+			width: 160px
+			height: 2px
+			background: $main-color
+			margin: 30px auto
+.gyf-carousel
+	.item,
+	.owl-item
+		@media only screen and (max-width: 400px)
+			width: 320px!important
+		@media only screen and (max-width: 600px)
+			width: 420px!important
+		@media only screen and (min-width: 700px)
+			width: 850px!important
+	.item
+		position: relative
+		overflow: hidden
+		&:hover
+			img
+				transform: scale(1.2) 
+				//transform: translateY(-20%)
+		.item-descr-wrap
+			padding: 5%
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			background: rgba(0,0,0,.5)
+			width: 100%
+			height: 100%
+			z-index: 1
+			color: #fff
+			h1
+				text-transform: uppercase
+				font-size: 35px
+		.button.button-yellow
+			position: absolute
+			background: #f6b91b
+			right: 5%
+			bottom: 5%
+			z-index: 1
+			box-shadow: 0 4px 0 darken(#f6b91b,15%)
+			transition: all .25s ease
+			&:hover,
+			&:focus
+				background: darken(#f6b91b,10%)
+		img
+			z-index: -1
+			overflow: hidden
+			transform: translateY(-4%) scale(1.1) 
+			transition: transform .35s ease
+.gyf-carousel
+	.carousel-wrap
+		margin: 15px
+	.owl-nav
+		>	div
+			display: inline-block
+			width: 64px
+			height: 64px
+			background-color: grey
+			color: $main-color
+			text-align: center
+			line-height: 64px
+			font-size: 26px
+			&.owl-prev
+				margin-right: 10px
+				color: #fff
+			&.owl-next
+				color: #fff
+
+
+.gyf-gallery
+	padding: 35px 0
+	text-align: center
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	.gyf-gallery-container
+		display: flex
+		flex-flow: row
+		//flex-wrap: wrap
+		//justify-content: space-between
+		.grid-col
+			flex: 1
+			padding: 0
+		.grid-item
+			display: block
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				width: 100%
+				height: 100%
+				background: radial-gradient(ellipse at center, rgba(125,185,232,0) 0%,rgba(0,0,0,1) 100%)
+				transition: all .3s ease-in-out
+				opacity: 0
+				z-index: 199
+			&:hover
+				&:before
+					opacity: 1
+
+		.grid-item img
+			margin-top: 0
+
+.grid-col--2,
+.grid-col--3
+	display: none
+
+@media (min-width: 768px)
+	.grid-col--2,
+	.grid-col--3
+		display: block
+
+
+.mfp-fade
+	&.mfp-bg
+		opacity: 0
+		transition: all 0.5s ease-in-out
+		&.mfp-ready
+			opacity: 0.8
+		&.mfp-removing
+			opacity: 0
+	&.mfp-wrap
+		.mfp-content
+			opacity: 0
+			transform: scale(0) rotate(90deg)
+			transition: all 0.5s ease-in-out
+		&.mfp-ready .mfp-content
+			opacity: 1
+			transform: scale(1) rotate(0deg)
+		&.mfp-removing .mfp-content
+			opacity: 0
+

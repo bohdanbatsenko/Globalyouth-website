@@ -1,0 +1,142 @@
+@import "vars.sass"
+
+.s-wcexh-intro
+	height: 200px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	background-image: url(../img/wcexh/wcexh-header-bg.jpg)
+	background-size: cover
+	background-position: center 50%
+	width: 100%
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(#000,.5)
+	.s-wcexh-intro-content
+		text-align: center
+		z-index: 1
+		h1
+			margin: 0 auto
+			padding: 10px 20px
+			align-content: center
+			display: inline-block
+			color: #fff
+			text-transform: uppercase
+			text-shadow: 2px 3px 2px #000
+
+.s-wcexh
+	background-image: url(../img/wcexh/wcexh-bottom-bg.jpg)
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center bottom
+	position: relative
+.s-wcexh-wrap
+	margin: 0 auto
+	background: rgba(255,255,255,.8)
+
+	position: relative
+	margin-bottom: 10em
+	@media only screen and (min-width : 990px)
+		width: 80%
+	.s-wcexh-title
+		margin: 0 auto
+		padding: 18px
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		align-content: center
+		@media only screen and (min-width : 1200px)
+			width: 70%
+		@media only screen and (max-width : 990px)
+			flex-direction: column	
+		.wcexh-title-left
+			margin-right: 29px
+			img
+				margin-top: 0
+				width: 90px
+				height: auto
+		.wcexh-title-right
+			text-align: left
+			margin: 0
+			h2
+				font-family: $titles-font-light2
+				display: inline-block
+				font-size: 38px
+				text-align: left
+				text-transform: uppercase
+				color: green
+				margin: 0
+				padding: 0
+				color: $brand-kor-purple
+				span
+					color: $brand-kor-red
+	.wcexh-body
+		margin: 3em .3em 0
+		padding: 0
+		display: flex
+		flex-direction: row
+		justify-content: top
+		@media only screen and (max-width : 768px)
+			flex-direction: column			
+		.wcexh-text
+			flex: 0 0 40%
+			p
+				font-size: 20px
+				text-indent: 2em
+				line-height: 1.4
+				text-align: justify
+				padding: 0 .5em
+				margin-top: 0
+		.wcexh-images
+			flex: 0 0 58%
+			margin: 0 1.5em
+			display: grid
+			grid-template-columns: 49% 49%
+			grid-template-rows: 150px 150px
+			grid-gap: 5px
+			> div
+				background-repeat: no-repeat
+				background-size: cover
+				&.a
+					grid-row: 1 / span 2
+
+
+$colors: $jap_blue, $jap_red, $jap_accent
+@for $i from 1 through length($colors)
+	.wcexh-descr ul.wcexh-list li:nth-child(#{length($colors)}n+#{$i})
+		i
+			color: nth($colors, $i)
+
+	.wcexh-descr
+		padding: 1em 2em
+		h3
+			font-family: $titles-font-light2
+			font-size: 25px
+			color: $brand-kor-purple
+			span
+				color: $brand-kor-red
+		ul.wcexh-list
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				display: block
+				position: relative
+				margin-left: 40px
+				font-size: 20px
+				.fa
+					position: absolute
+					top: 10px
+					font-size: 19px
+					line-height: 20px
+					left: -35px
+					color: rgba($main-color,.5)
+					display: inline-block
+					margin-right: 30px
