@@ -1,4 +1,5 @@
 /node_modules/
+/translateRU
 /dist/
 /.git/
 /app/img/**/*.eps
